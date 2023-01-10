@@ -1,0 +1,509 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto';
+}
+
+body{
+    background-color: lightgray;
+}
+:root{
+    --red:rgb(233, 50, 50);
+    --blue:rgb(54, 54, 240);
+    --green: rgb(6, 170, 6);
+}
+
+input:disabled {
+    background: rgb(151, 151, 151);
+  }
+
+.main-title-area{
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.main-title{
+    color: var(--red);
+}
+.main-title-area span{
+    color: var(--blue);
+}
+
+/*TRAINER AREA*/
+.trainer-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 14px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.trainer-area label{
+    font-weight: bold;
+    font-size: 14pt;
+    color: var(--blue);
+    margin-right: 5px;
+}
+
+.trainer-area input{
+    background-color: white;
+    font-size: 14pt;
+    padding: 5px;
+    border: none;
+    outline-color: var(--blue);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.trainer-area button{
+    background-color: var(--green);
+    border: none;
+    font-size: 14pt;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: white;
+    border-radius: 0px 10px 10px 0px;
+}
+.trainer-area button:hover{
+    filter: brightness(1.1);
+    border-radius: 6px;
+}
+
+/*POKEMON AREA*/
+
+#formPkmn{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: var(--red);
+    border-bottom: 2px solid black;
+    border-radius: 14px 14px 0px 0px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.pokemon-name-area{
+    border: 1px solid darkred;
+    padding: 6px;
+}
+.pokemon-level-area{
+    border: 1px solid darkred;
+    padding: 6px;
+}
+.pokemon-type-area{
+    border: 1px solid darkred;
+    padding: 6px;
+}
+
+#formPkmn label{
+    font-size: 14pt;
+    color: white;
+    font-weight: bold;
+}
+
+#formPkmn #poke-name{
+    font-size: 14pt;
+    padding-left: 5px;
+    border: none;
+    outline-color: var(--red);
+    color: var(--red);
+}
+
+#formPkmn #poke-level{
+    font-size: 14pt;
+    padding-left: 5px;
+    width: 3rem;
+    border: none;
+    outline-color: var(--red);
+    color: var(--red);
+}
+
+#formPkmn #poke-type{
+    font-size: 14pt;
+    padding-left: 5px;
+    border: none;
+    outline-color: var(--red);
+    color: var(--red);
+    cursor: pointer;
+}
+#formPkmn #poke-type option{
+    border: none;
+}
+
+#formPkmn #create-btn{
+    background-color: var(--green);
+    border: none;
+    font-size: 14pt;
+    padding-left: 4px;
+    padding-right: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: white;
+}
+
+#formPkmn #create-btn:hover{
+    filter: brightness(1.1);
+    border-radius: 6px;
+}
+
+/*PARTY AREA*/
+
+#new-pkmn-area{
+   background-color: white;
+   margin-left: 15px;
+   margin-right: 15px;
+    border-radius:  0px 0px 14px 14px;
+    border-top: 2px solid black;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 3px 5px 60px rgba(78, 77, 77, 0.767);
+}
+
+#trainer-party-name{
+    color: var(--red);
+    text-decoration: underline;
+}
+#trainer-party-name::after{
+    content: "'s Party: ";
+}
+
+#pokemon-list{
+    /* border: 1px solid var(--red); */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 1s;
+    width: 950px;
+}
+#pokemon-list li{
+    background-color: lightseagreen;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+   margin: 10px;
+   border: 1px solid var(--red);
+   border-radius: 16px;
+}
+
+#pokemon-list h2{
+    color: white;
+    text-transform: uppercase;
+}
+
+#pokemon-list li span{
+    padding: 6px;
+    font-size: 14pt;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+#pokemon-list li span::before{
+    content: "Lvl: ";
+    filter: brightness(0.5);
+}
+
+#pokemon-list li h3{
+    padding: 6px 13px;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 
+    -1px -1px 0px black, 
+    -1px 1px 0px black,                    
+     1px -1px 0px black,                  
+     1px 0px 0px black;
+}
+
+/*TYPES STYLES*/
+
+#fire-type{
+background-color: orange;
+}
+#water-type{
+  background-color: rgb(55, 158, 253);  
+
+}
+#grass-type{
+    background-color: rgb(27, 192, 27);  
+}
+#normal-type{
+    background-color: burlywood;  
+}
+#eletric-type{
+    background-color: rgb(233, 233, 40);  
+}
+#flying-type{
+    background-color: rgb(139, 139, 139);  
+}
+#bug-type{
+background-color: rgb(156, 241, 59);
+}
+#rock-type{
+  background-color: rgb(160, 141, 55);  
+
+}
+#ground-type{
+    background-color: rgb(226, 213, 94);  
+}
+#fighting-type{
+    background-color: rgb(114, 47, 9);  
+}
+#ice-type{
+    background-color: rgb(97, 231, 255);  
+}
+#dragon-type{
+    background-color: rgb(55, 52, 219);  
+}
+#poison-type{
+    background-color: rgb(114, 9, 100);  
+}
+#ghost-type{
+    background-color: rgb(60, 22, 165);  
+}
+#psychic-type{
+    background-color: rgb(252, 82, 195);  
+}
+
+/*RESPONSIVITY*/
+
+@media (max-width:900px){
+    
+
+#formPkmn{
+    width: 100%;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 0;
+    gap: 10px;
+   
+}
+
+.pokemon-name-area{
+border: 1px solid white;
+border-radius: 30px;
+  width:350px;
+  margin: auto;
+  
+}
+.pokemon-level-area{
+    border: 1px solid white;
+    border-radius: 30px;
+  width:350px;
+  margin: auto;
+}
+.pokemon-type-area{
+    border: 1px solid white;
+    border-radius: 30px;
+  width:350px;
+  margin: auto;
+}
+
+#formPkmn label{
+    font-size: 12pt;
+    color: white;
+    font-weight: bold;
+}
+
+#formPkmn #poke-name{
+    font-size: 12pt;
+    padding:7px 10px;
+    border: none;
+    outline-color: var(--red);
+    color: var(--red);
+}
+
+#formPkmn #poke-level{
+    font-size: 12pt;
+    padding:7px 10px;
+    width: 3rem;
+    border: none;
+    outline-color: var(--red);
+    color: var(--red);
+}
+
+#formPkmn #poke-type{
+    font-size: 12pt;
+    padding-left: 5px;
+    border: none;
+    outline-color: var(--red);
+    color: var(--red);
+    cursor: pointer;
+}
+#formPkmn #poke-type option{
+    border: none;
+}
+
+#formPkmn #create-btn{
+    background-color: var(--green);
+    border-radius: 30px;
+    font-size: 12pt;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: white;
+    width: 250px;
+    margin: auto;
+    margin-top: 5px;
+    height: 30px;
+}
+
+/*TRAINER AREA*/
+.trainer-area{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: lightblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin: auto;
+}
+
+.trainer-area label{
+    font-weight: bold;
+    font-size: 12pt;
+    color: var(--blue);
+    margin-right: 5px;
+}
+
+.trainer-area input{
+    background-color: white;
+    font-size: 12pt;
+    padding: 5px 10px;
+    border: none;
+    outline-color: var(--blue);
+    border-radius: 30px;
+    width: 350px;
+}
+
+.trainer-area button{
+    background-color: var(--green);
+    border: none;
+    font-size: 12pt;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: white;
+    border-radius: 30px;
+    width: 350px;
+
+}
+
+/*PARTY AREA*/
+
+#new-pkmn-area{
+    background-color: white;
+    margin: auto;
+    width: 100%;
+     border-radius:0;
+     border-top: 2px solid black;
+     padding: 0px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 6px;
+     box-shadow: none
+ }
+ 
+ #trainer-party-name{
+     color: var(--red);
+     text-decoration: underline;
+ }
+ #trainer-party-name::after{
+     content: "'s Party: ";
+ }
+ 
+ #pokemon-list{
+    margin: auto;
+     border: none;
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     transition: all 1s;
+     width: auto;
+     align-items: center;
+     
+ }
+ #pokemon-list li{
+     background-color: lightseagreen;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     padding: 10px 20px;
+    border: none;
+    width: 100%;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    
+ }
+ 
+ #pokemon-list h2{
+    font-size: 13pt;
+     color: white;
+     text-transform: uppercase;
+ }
+ 
+ #pokemon-list li span{
+    font-size: 13pt;
+     padding: 5px;
+     font-weight: bold;
+     border-radius: 10px;
+     background-color: aquamarine;
+ }
+ #pokemon-list li span::before{
+     content: "Lvl: ";
+     filter: brightness(0.5);
+ }
+ 
+ #pokemon-list li h3{
+    font-size: 13pt;
+     padding: 6px 13px;
+     border-radius: 10px;
+     color: white;
+     text-transform: uppercase;
+     text-shadow: 
+     -1px -1px 0px black, 
+     -1px 1px 0px black,                    
+      1px -1px 0px black,                  
+      1px 0px 0px black;
+ }
+ 
+ .main-title-area{
+ 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.main-title{
+    overflow-x: hidden;
+    font-size: 18pt;
+    color: var(--red);
+}
+.main-title-area span{
+    color: var(--blue);
+}
+
+}
