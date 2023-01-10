@@ -11,7 +11,7 @@ const trainerName = document.getElementById('trainer-party-name');
 const setTrainerBtn = document.getElementById('set-trainer');
 let trainerSet = false
 let counter = 1
-let eventCounter = 0;
+// let eventCounter = 0;
 //events
 
 createBtn.addEventListener('click', createPkmn);
@@ -36,7 +36,7 @@ function createPkmn(ev){
         alert('insert a pokemon name');
         return
     }
-    eventCounter++
+    // eventCounter++
     const newPokeLevel = document.createElement('span');
     newPokeLevel.innerText = inputPkmnLevel.value;
     newPokeLevel.className = 'pokemon-level-style';
@@ -93,7 +93,7 @@ function createPkmn(ev){
 
     counter++
     console.log(pokemonListUl)
-    console.log('Event n° '+eventCounter)
+    // console.log('Event n° '+eventCounter)
     } else{
         ev.preventDefault()
         alert('First, set a trainer name!');
@@ -105,7 +105,7 @@ function createPkmn(ev){
 function partyLimit(){
     console.log('verifying party length')
     const pokemonItemGroup = document.querySelectorAll('.poke-li-style');
-    if(eventCounter >4){
+    if(pokemonItemGroup.length >4){
         createBtn.removeEventListener('click', createPkmn)
         createBtn.style.cursor = 'not-allowed'
         createBtn.setAttribute('disabled', 'disabled')
